@@ -77,7 +77,152 @@
 
     <div class="w3-padding-64 w3-content w3-text-grey" id="skills">
       <h2 class="w3-padding-16 w3-text-light-grey">My Skills</h2>
-      class="link-text"
+      <style>
+        .box-table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+      
+        .box-table th,
+        .box-table td {
+          border: 1px solid #ddd;
+          padding: 13px;
+          text-align: left;
+        }
+      
+        .box-table th {
+          background-color: #f2f2f2;
+          color: #444;
+        }
+      
+        .align-right {
+          text-align: right;
+        }
+      
+        .align-left {
+          text-align: left;
+        }
+        
+        .link-text:link {
+          color: rgb(90, 90, 90); /* Link color when it is not visited */
+        }
+
+        .link-text:visited {
+           color: rgb(101, 102, 102); /* Link color when it is visited */
+        }
+
+        .link-text:hover {
+          color: rgb(255, 0, 0); /* Link color when it is being hovered */
+        }
+
+        .link-text:active {
+           color: rgb(1, 255, 14); /* Link color when it is being clicked */
+        }
+      
+        /* Responsive styles */
+        @media (max-width: 767px) {
+          .box-table {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+          }
+          
+          .box-table th,
+          .box-table td {
+            display: table-cell;
+            padding: 10px;
+          }
+          
+          .box-table th {
+            font-weight: bold;
+            background-color: #f2f2f2;
+          }
+        }
+      </style>
+      <table class="box-table">
+        <tr>
+          <th colspan="2">General-Purpose Programming Languages</th>
+          <th class="align-right">Project Made</th>
+          <th class="align-right">Project Title/Type</th>
+        </tr>
+        <tr>
+        <td class="align-left" data-label="Language">C</td>
+        <td></td>
+        <td class="align-right">2</td>
+        <td class="align-right">
+          <a href="https://github.com/ShadowR3aper/GradeMaster" target="_blank" class="link-text">GradeMaster</a>
+          <a href="https://github.com/ShadowR3aper/CyberZoneConsole" target="_blank" class="link-text"><br>CyberZoneConsole</a>
+        </td>
+        </tr>
+        <tr>
+          <td class="align-left">Java</td>
+          <td></td>
+          <td class="align-right">1</td>
+          <td class="align-right">
+            <a href="https://github.com/ShadowR3aper/Java-projects/tree/main/Intermediate%20Projects/StudentGrade_SystemTracker" target="_blank" class="link-text">StudentGrade_SystemTracker</a>
+          </td>
+        </tr>
+      
+        <tr>
+          <th colspan="2">Front-End & Back-End Development</th>
+          <th class="align-right">Project Made</th>
+          <th class="align-right">Project Title/Type</th>
+        </tr>
+        <tr>
+          <td class="align-left">HTML</td>
+          <td></td>
+          <td class="align-right">1</td>
+          <td class="align-right">
+          <a href="https://shadowr3aper.github.io/Cruzportfolio/" target="_blank" class="link-text">Portfolio</a>
+         </td>  
+        </tr>
+        <tr>
+          <td class="align-left">CSS</td>
+          <td></td>
+          <td class="align-right">1</td>
+          <td class="align-right">
+          <a href="https://shadowr3aper.github.io/Cruzportfolio/" target="_blank" class="link-text">Portfolio</a>
+        </td>   
+        </tr>
+        <tr>
+          <td class="align-left">JavaScript</td>
+          <td></td>
+          <td class="align-right">1</td>
+          <td class="align-right">
+          <a href="https://shadowr3aper.github.io/Cruzportfolio/" target="_blank" class="link-text">Portfolio</a>
+        </td>
+        </tr>
+        <tr>
+          <td class="align-left">PHP</td>
+          <td></td>
+          <td class="align-right">0</td>
+          <td class="align-right"></td>
+        </tr>
+        <tr>
+          <td class="align-left">Python</td>
+          <td></td>
+          <td class="align-right">0</td>
+          <td class="align-right"></td>
+        </tr>
+
+        <tr>
+          <th colspan="2">Scripting Languages</th>
+          <th class="align-right">Project Made</th>
+          <th class="align-right">Project Title/Type</th>
+        </tr>
+        <tr>
+          <td class="align-left">VBScript [Visual Basic Scripting]</td>
+          <td></td>
+          <td class="align-right">0</td>
+          <td class="align-right"></td>
+        </tr>
+        <tr>
+          <td class="align-left">VBA [Visual Basic for Applications]</td>
+          <td></td>
+          <td class="align-right" >0</td>
+          <td class="align-right"></td>
+        </tr>
+      </table>
       
       <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
         <div class="w3-quarter w3-section">
