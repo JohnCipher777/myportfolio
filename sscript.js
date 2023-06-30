@@ -51,3 +51,29 @@ function showWelcomeMessage(){
         alert("HELLO, ANONYMOUS!\nWELCOME TO MY PORTFOLIO.");
       }
 }
+
+function clearForm() {
+  // Get the form element
+  var form = document.getElementById("contactForm");
+
+  // Get all input fields within the form
+  var inputs = form.getElementsByTagName("input");
+
+  // Check if all input fields are empty
+  var isEmpty = true;
+  for (var i = 0; i < inputs.length; i++) {
+    if (inputs[i].value.trim() !== "") {
+      isEmpty = false;
+      break;
+    }
+  }
+
+  // Display a message if all fields are empty
+  if (isEmpty) {
+    alert("No Data Entered.\n Nothing to Clear.");
+  }else{
+    // Reset the form
+    form.reset();
+    alert("Form Cleared");
+  }
+}
