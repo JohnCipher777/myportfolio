@@ -50,6 +50,7 @@
   </a>
 </nav>
 
+
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
@@ -272,14 +273,30 @@
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i><b>jhonlloydcruz7@gmail.com</b></p>
     </div><br>
     <p>Let's get in touch. Send me a message:</p></h4>
-    <form action="/action_page.php" target="_blank">
+    <form id="contactForm" action="mailto:skyhunter44bc@gmail.com" method="post" enctype = "text/plain" target="_blank">
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <select class="w3-input w3-padding-16" required name="Subject">
+          <option value="" disabled selected>Select Subject</option>
+          <option value="General Inquiry">General Inquiry</option>
+          <option value="Support Request">Support Request</option>
+          <option value="Feedback">Feedback</option>
+          <option value = "Job">Job Application</option>
+          <option value="Partnership Inquiry">Partnership Inquiry</option>
+          <option value="Bug Report">Bug Report</option>
+          <option value="Feature Request">Feature Request</option>
+          <option value="Marketing">Marketing</option>
+        </select>
+      </p>
+      <p>
+        <textarea class="w3-input w3-padding-16" type="text" placeholder="Message" required name="message"  rows="5"></textarea>
+      </p>
       <p>
         <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> <a href="images/special.gif">MESSAGE</a>
+          <i class="fa fa-send"></i> <a value="Send Data" >SEND</a>
+        </button>
+        <button class="w3-button w3-light-grey w3-padding-large" type="button" onclick="clearForm()">
+          CLEAR
         </button>
       </p>
     </form>
