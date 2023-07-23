@@ -87,8 +87,6 @@ function showWelcomeMessage() {
  if (isMobileDevice()) {
    alert("WELCOME TO MY PORTFOLIO");
  }else{
-   var welcomeAudio = new Audio('audio/voiceintro.mp3');
-   welcomeAudio.play();
    loadPopupContent();
  }
 }
