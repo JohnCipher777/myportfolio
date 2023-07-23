@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Popup Message</title>
+    <!-- Add the <audio> element for the welcome message -->
+    <audio id="welcome-audio" controls autoplay style="display: none;">
+        <source src="audio/voiceintro.mp3" type="audio/mpeg">
+    </audio>
+    <style>
+        /* Styles for the popup container */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #f0f0f0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 9999;
+            color: #333; /* Set the text color here */
+            font-family: "Anonymous Pro", monospace; /* Set the font here */
+        }
+
+        /* Style for the OK button container */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        /* Style for the OK button */
+        .popup-container button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- The popup container -->
+    <div class="popup-container" id="popup">
+        <p style="font-size: 18px;" id="welcomeMessage">WELCOME TO MY PORTFOLIO</p>
+        <div class="button-container">
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to show the popup
+            function showPopup() {
+                var popup = document.getElementById('popup');
+                popup.style.display = 'block';
+            }
+
+            // Function to close the popup
+            function closePopup() {
+                var popup = document.getElementById('popup');
+                popup.style.display = 'none';
+            }
+
+            // Function to play the welcome message
+            function playWelcomeMessage() {
+                var welcomeAudio = new Audio("audio/voiceintro.mp3");
+                welcomeAudio.play();
+            }
+
+            // Check if the welcome message has been played before
+            var hasPlayedWelcomeMessage = localStorage.getItem('hasPlayedWelcomeMessage');
+            if (!hasPlayedWelcomeMessage) {
+                // If not played before, play the welcome message and set the flag
+                playWelcomeMessage();
+                localStorage.setItem('hasPlayedWelcomeMessage', 'true');
+            }
+
+            // Call the showPopup function directly without using window.onload
+            showPopup();
+        });
+    </script>
+</body>
+</html>
